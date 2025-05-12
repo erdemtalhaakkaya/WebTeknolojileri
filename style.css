@@ -1,0 +1,38 @@
+/* body’yi iki bölüme ayırmak için */
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Kenar çubuğu */
+.sidebar {
+  width: 220px;
+  background: #343a40;
+  color: #fff;
+}
+.sidebar .nav-link {
+  color: #adb5bd;
+}
+.sidebar .nav-link:hover {
+  color: #fff;
+}
+.sidebar .profile-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* İçerik alanı */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Sayımsal kutucuklar */
+.counter {
+  margin: 20px 0;
+}
+.counter .emoji {
+  font-size: 2rem;
+}
