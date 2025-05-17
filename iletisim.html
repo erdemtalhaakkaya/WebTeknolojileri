@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hakkımda – Erdem</title>
+  <title>İletişim – Erdem</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
@@ -46,43 +46,42 @@
     </div>
     <nav class="nav flex-column">
       <a class="nav-link" href="sehrim.html"><i class="bi bi-house"></i> Şehrim</a>
-      <a class="nav-link active" href="index.html"><i class="bi bi-person"></i> Hakkımda</a>
+      <a class="nav-link" href="index.html"><i class="bi bi-person"></i> Hakkımda</a>
       <a class="nav-link" href="cv.html"><i class="bi bi-file-earmark-text"></i> Özgeçmiş</a>
       <a class="nav-link" href="ilgi-alanlarim.html"><i class="bi bi-stars"></i> İlgi Alanlarım</a>
-      <a class="nav-link" href="iletisim.html"><i class="bi bi-envelope"></i> İletişim</a>
+      <a class="nav-link active" href="iletisim.html"><i class="bi bi-envelope"></i> İletişim</a>
     </nav>
   </aside>
 
   <main class="flex-fill">
     <section class="container">
-      <h1 class="mb-4">Merhaba, ben Erdem!</h1>
-      <p>Sakarya Üniversitesi Bilgisayar Mühendisliği 1. sınıf öğrencisiyim. Boş zamanlarımda <strong>fotoğrafçılık</strong>, <strong>bisiklet</strong> ve <strong>Formula 1</strong> yayınlarını takip etmeyi çok severim.</p>
-      <div class="row mt-4 g-4">
-        <div class="col-md-4">
-          <div class="card h-100 bg-primary text-white">
-            <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-gear me-2"></i>Teknik İlgi</h5>
-              <p class="card-text">Web geliştirme (HTML/CSS/JS) ve yapay zeka projeleriyle uğraşıyorum.</p>
-            </div>
-          </div>
+      <h1 class="mb-4">İletişim</h1>
+      <form action="mailto:ornek@mail.com" method="POST" enctype="text/plain">
+        <div class="mb-3">
+          <label for="name" class="form-label">Ad Soyad</label>
+          <input type="text" class="form-control" id="name" name="name" required minlength="3" />
         </div>
-        <div class="col-md-4">
-          <div class="card h-100 bg-primary text-white">
-            <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-bicycle me-2"></i>Aktif Yaşam</h5>
-              <p class="card-text">Fitness ve doğa yürüyüşleriyle formda kalıyorum, şehir içi bisiklet sürmeyi ihmal etmiyorum.</p>
-            </div>
-          </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-posta</label>
+          <input type="email" class="form-control" id="email" name="email" required />
         </div>
-        <div class="col-md-4">
-          <div class="card h-100 bg-primary text-white">
-            <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-camera me-2"></i>Fotoğrafçılık</h5>
-              <p class="card-text">Seyahat ettiğim yerleri lensimden yansıtmak benim en büyük hobim.</p>
-            </div>
-          </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Telefon (opsiyonel)</label>
+          <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10,11}" placeholder="05XXXXXXXXX" />
         </div>
-      </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Mesajınız</label>
+          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Gönder</button>
+        <button type="reset" class="btn btn-outline-secondary ms-2">Temizle</button>
+      </form>
+
+      <p class="text-muted mt-4">
+        <small>
+          Bu form <code>mailto:</code> protokolü ile çalışır. Bilgisayarınızda bir e‑posta istemcisi yüklü değilse, gönderim gerçekleşmeyebilir. Gelişmiş gönderim için PHP veya başka bir arka uç dili kullanılabilir.
+        </small>
+      </p>
     </section>
   </main>
 
