@@ -11,15 +11,15 @@ $error_message = '';
 // Form boş mu kontrol et
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($email) || empty($password)) {
-        $error_message = "E‑posta ve şifre boş bırakılamaz!";
+        $error_message = "E‑posta ve Şifre Boş Bırakılamaz!";
     } elseif (!preg_match('/^b[0-9]{9}@ogr\.sakarya\.edu\.tr$/', $email)) {
-        $error_message = "Geçerli bir okul e‑posta adresi giriniz!";
+        $error_message = "Geçerli Bir Okul E‑Posta Adresi Giriniz!";
     } else {
         $student_number = explode('@', $email)[0];
         if ($password === $student_number) {
             $is_valid = true;
         } else {
-            $error_message = "Şifre hatalı!";
+            $error_message = "Şifre Hatalı!";
         }
     }
 } else {
@@ -39,10 +39,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <?php endif; ?>
 </head>
 <body class="login-body d-flex vh-100">
-  <div class="login-card text-center">
+  <div class="login-card text-center" >
     <?php if ($is_valid): ?>
-      <h2>Hoşgeldiniz<br><strong><?= htmlspecialchars($student_number) ?></strong></h2>
-      <p class="mt-3">Siteye yönlendiriliyorsunuz...</p>
+      <h2 style="color: white;">Hoşgeldiniz<br><strong><?= htmlspecialchars($student_number) ?></strong></h2>
+      <p class="mt-3" style="color: white;">Siteye yönlendiriliyorsunuz...</p>
+
     <?php else: ?>
       <h3 class="text-danger"><?= $error_message ?></h3>
       <a href="login.html" class="btn btn-warning mt-4">Geri Dön</a>
